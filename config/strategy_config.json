@@ -1,0 +1,19 @@
+{
+    "in_sample_start":     "2024-01-01",
+    "in_sample_end":       "2025-01-01",
+    "out_sample_start":    "2025-01-01",
+    "out_sample_end":      "2026-04-27",
+    "bar_size_minutes":    5,
+    "sigma_window_bars":   20,
+    "min_bars_in_session": 1,
+    "direction_mode":      "TREND",
+    "entry_z":             0.3,
+    "stop_mult":           1.0,
+    "target_mult":         2.0,
+    "max_hold_bars":       1,
+    "cooldown_bars":       0,
+    "max_trades_per_session": 30,
+    "transaction_cost":    0.25,
+    "slippage":            0.0,
+    "contracts":           1
+}

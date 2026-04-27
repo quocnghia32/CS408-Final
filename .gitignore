@@ -1,0 +1,11 @@
+.env
+database.json
+.venv/
+logs/
+doc/bars_*.csv
+doc/trades_*.csv
+doc/optimization_results.csv
+__pycache__/
+*.pyc
+orders.db*
+paperbroker_client-*.whl
