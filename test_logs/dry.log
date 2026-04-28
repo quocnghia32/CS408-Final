@@ -1,0 +1,48 @@
+[2026-04-28 09:39:13] [INFO] ============================================================
+[2026-04-28 09:39:13] [INFO]   VN30F IVMR Live Trader  [AM]  DRY-RUN
+[2026-04-28 09:39:13] [INFO]   mode=TREND  entry_z=0.1  stop=1.0σ  target=2.0σ  max_hold=1  max_trades=30
+[2026-04-28 09:39:13] [INFO] ============================================================
+[2026-04-28 09:39:15] [INFO] Front-month: VN30F2605  (expires 2026-05-21)
+[2026-04-28 09:39:15] [INFO] Seeding sigma from history 2026-02-27 → 2026-04-28 ...
+  Fetching ticks 2026-02-27 → 2026-04-28 ...
+  Raw ticks: 657,787
+[2026-04-28 09:39:56] [INFO] Seed sigma = 4.124 pts
+[2026-04-28 09:39:56] [INFO] Initialized RedisMarketDataClient: 52.76.242.46:6380 db=0, merge_updates=True
+[2026-04-28 09:39:56] [INFO] [DRY] Subscribing to HNXDS:VN30F2605 via Redis...
+[2026-04-28 09:39:56] [INFO] Registered callback for HNXDS:VN30F2605. Total callbacks: 1
+[2026-04-28 09:39:56] [INFO] Connected to Redis: 52.76.242.46:6380
+[2026-04-28 09:39:56] [INFO] Subscribed to 1 channels: ['HNXDS:VN30F2605']
+[2026-04-28 09:39:56] [INFO] Subscription loop started
+[2026-04-28 09:39:56] [INFO] Redis subscription ready.
+[2026-04-28 09:39:56] [INFO] Starting evaluation loop.
+[2026-04-28 09:39:56] [INFO] Pub/sub loop running...
+[2026-04-28 09:39:56] [INFO] Session AM opened — starting evaluation loop.
+[2026-04-28 09:41:56] [INFO] [bar 1] px=2019.00 vwap=2019.07 sigma=4.12 z=-0.018 thresh=±0.1
+[2026-04-28 09:43:56] [INFO] [bar 2] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:43:56] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:43:56] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88
+[2026-04-28 09:45:56] [INFO] [DRY] close SELL @ 2020.00  reason=time
+[2026-04-28 09:45:56] [INFO] EXIT time @ 2020.00  PnL=-0.50 pts  [trade 1/30]
+[2026-04-28 09:45:56] [INFO] [bar 3] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:45:56] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:45:56] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88
+[2026-04-28 09:47:56] [INFO] [DRY] close SELL @ 2020.00  reason=time
+[2026-04-28 09:47:56] [INFO] EXIT time @ 2020.00  PnL=-0.50 pts  [trade 2/30]
+[2026-04-28 09:47:56] [INFO] [bar 4] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:47:56] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:47:56] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88
+[2026-04-28 09:49:56] [INFO] [DRY] close SELL @ 2020.00  reason=time
+[2026-04-28 09:49:56] [INFO] EXIT time @ 2020.00  PnL=-0.50 pts  [trade 3/30]
+[2026-04-28 09:49:56] [INFO] [bar 5] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:49:56] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:49:56] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88
+[2026-04-28 09:51:57] [INFO] [DRY] close SELL @ 2020.00  reason=time
+[2026-04-28 09:51:57] [INFO] EXIT time @ 2020.00  PnL=-0.50 pts  [trade 4/30]
+[2026-04-28 09:51:57] [INFO] [bar 6] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:51:57] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:51:57] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88
+[2026-04-28 09:53:57] [INFO] [DRY] close SELL @ 2020.00  reason=time
+[2026-04-28 09:53:57] [INFO] EXIT time @ 2020.00  PnL=-0.50 pts  [trade 5/30]
+[2026-04-28 09:53:57] [INFO] [bar 7] px=2020.00 vwap=2019.45 sigma=4.12 z=+0.135 thresh=±0.1
+[2026-04-28 09:53:57] [INFO] Placing BUY LIMIT  1×HNXDS:VN30F2605 @ 2020.00
+[2026-04-28 09:53:57] [INFO] [DRY] entry=2020.00 target=2028.25 stop=2015.88

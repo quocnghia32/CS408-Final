@@ -30,13 +30,13 @@ from threading import Event as ThreadEvent
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "test_src"))
 load_dotenv(ROOT / ".env")
 
 from data import fetch_5min_bars, add_signal, get_ticker_expiry
 
-STATE_FILE  = ROOT / "logs" / "state.json"
-TRADES_FILE = ROOT / "doc" / "trades_papertrade.csv"
+STATE_FILE  = ROOT / "test_logs" / "state.json"
+TRADES_FILE = ROOT / "test_logs" / "trades_papertrade_TEST.csv"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -46,7 +46,7 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ── Strategy parameters (loaded from config but overridable) ──────────────────
-_CFG = json.loads((ROOT / "config" / "strategy_config.json").read_text())
+_CFG = json.loads((ROOT / "test_config" / "strategy_config.json").read_text())
 ENTRY_Z              = float(_CFG["entry_z"])
 STOP_MULT            = float(_CFG["stop_mult"])
 TARGET_MULT          = float(_CFG.get("target_mult", 2.0))
@@ -340,11 +340,8 @@ class IVMRTrader:
         if not self.in_pos:
             return
         close_side = "SELL" if self.direction == "LONG" else "BUY"
-        # cross the spread aggressively (+/-1.0 = 10 ticks) to ensure close fills instantly,
-        # avoiding stale resting orders that trigger self-trade rejection on next entry
-        agg_price = price + 1.0 if close_side == "BUY" else price - 1.0
         if self.dry_run:
-            log.info(f"[DRY] close {close_side} @ {agg_price:.2f}  reason={reason}")
+            log.info(f"[DRY] close {close_side} @ {price:.2f}  reason={reason}")
         else:
             try:
                 if self.target_order_id:
@@ -353,7 +350,7 @@ class IVMRTrader:
                 log.warning(f"cancel target failed: {e}")
             self.client.place_order(
                 full_symbol=self.symbol, side=close_side, qty=N_CONTRACTS,
-                price=agg_price, ord_type="LIMIT",
+                price=price, ord_type="LIMIT",
             )
         self._record_exit(price, reason)
         await self._after_exit(reason)

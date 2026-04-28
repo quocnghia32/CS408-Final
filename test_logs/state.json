@@ -1,0 +1,17 @@
+{
+  "symbol": "HNXDS:VN30F2605",
+  "session": "AM",
+  "trades_done": 5,
+  "max_trades": 30,
+  "in_pos": true,
+  "direction": "LONG",
+  "entry_px": 2020.0,
+  "stop_level": 2015.8762689352334,
+  "session_vwap": 2019.4452590959206,
+  "sigma": 4.123731064766679,
+  "last_price": 2020.0,
+  "bar_count": 7,
+  "cooldown_left": 0,
+  "dry_run": true,
+  "updated_at": "2026-04-28 09:53:57"
+}
